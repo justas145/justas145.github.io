@@ -12,11 +12,12 @@ body {
     transition: background 0.5s;
     overflow-y: auto;
     overscroll-behavior: none;
+    padding-right: 15px; /* Adjust this value based on your scrollbar width */
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background: linear-gradient(to bottom, #2c1e4a, #4a3b6b) fixed;
+    background: linear-gradient(to bottom, #39396B, #435484) fixed;
     color: #ffffff;
 }
 
@@ -24,14 +25,17 @@ body.dark-mode {
 nav {
     position: fixed;
     top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    left: 0;
+    right: 0;
+    background: rgba(230, 210, 181, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    box-sizing: border-box; /* Add this line */
+    box-sizing: border-box;
+    z-index: 1000;
+    margin-right: 15px; /* Add this line */
 }
 
 nav ul {
@@ -40,6 +44,7 @@ nav ul {
     gap: 15px;
     margin: 0; /* Add this line */
     padding: 0; /* Add this line */
+    flex-grow: 1; /* Allow the ul to grow and push the toggle to the right */
 }
 
 nav ul li a {
@@ -50,7 +55,7 @@ nav ul li a {
 
 /* Dark Mode Navigation */
 body.dark-mode nav {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(57, 57, 107, 0.8); /* Matches the top color of the new dark mode gradient */
 }
 
 body.dark-mode nav ul li a {
