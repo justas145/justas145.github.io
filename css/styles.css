@@ -1,14 +1,22 @@
 /* General Styles */
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    background: linear-gradient(to bottom, #e6d2b5, #f0e6d2) fixed;
     transition: background 0.5s;
+    overflow-y: auto;
+    overscroll-behavior: none;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background: linear-gradient(to right, #141e30, #243b55);
+    background: linear-gradient(to bottom, #2c1e4a, #4a3b6b) fixed;
     color: #ffffff;
 }
 
@@ -23,12 +31,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    box-sizing: border-box; /* Add this line */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    margin: 0; /* Add this line */
+    padding: 0; /* Add this line */
 }
 
 nav ul li a {
@@ -46,11 +57,18 @@ body.dark-mode nav ul li a {
     color: #fff;
 }
 
+/* Add this new rule */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
 /* Toggle Switch */
 .toggle-switch {
     position: relative;
     width: 50px;
     height: 25px;
+    margin-left: 15px; /* Add this line */
 }
 
 .toggle-switch input {

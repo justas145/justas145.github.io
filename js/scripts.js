@@ -7,10 +7,10 @@ themeToggle.addEventListener('change', () => {
 // Typing Animation
 const typedTextElement = document.getElementById('typed-text');
 const facts = [
-    'A passionate developer.',
-    'An AI enthusiast.',
-    'Loves to solve problems.',
-    'Always learning new things.'
+    'MScstudent @ TU Delft',
+    'ML Engineer @ virtualworkforce.ai',
+    'Traveling the world',
+    'Always learning'
 ];
 let factIndex = 0;
 let charIndex = 0;
